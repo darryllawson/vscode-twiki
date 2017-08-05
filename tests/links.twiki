@@ -1,0 +1,139 @@
+---+ Wiki Word Linka
+
+Wiki word links should be highlighted as links (usually underlined and/or italic):
+
+	WikiWords
+    AnotherWikiWord
+    SoC - three characters are enough for a wiki word
+
+These are not wiki words:
+
+    AAaBar
+    A1Bar
+    A1aBar
+    Aa1Bar
+
+They can have a web prefix:
+
+    Web.WikiWord
+    WebName.WikiWord
+    AnotherOne.WebName.WikiWord
+    A.WikiWord - yep, web name can be a single character
+
+Web name prefixes must begin with a capital; these aren't valid:
+
+    nogood.WikiPage
+
+Wiki words can also be formatted:
+
+    *like WikiWord*
+    =or WikiWord=
+
+But a wiki word cannot start immediately after text formatting punctuation. The following are not valid:
+
+    *WikiWord*
+    =WikiWord like this too=
+
+Actually, a wiki word must be preceded by whitespace. These aren't wiki words:
+
+    ^WikiWord
+    {WikiWord
+    [WikiWord
+    /WikiWord
+    "WikiWord
+    'WikiWord
+    .WikiWord
+    !WikiWord
+    <nop>WikiWord
+    !WebName.WikiWord
+    <nop>WebName.WikiWord.
+    %WikiWord
+    %RED%WikiWord%ENDCOLOR%
+
+But, it can be preceded by a (:
+
+    (WikiWord
+
+
+---+ Forced Links
+
+Forced links look like this:
+
+    [[A link to somwehere]]
+    [[wiki#syntax]]
+    [[Main.TWiki groups]]
+
+They can appear anywhere on the line: [[Link]]
+
+They can have variable references:
+
+    [[Main.%VAR%]]
+
+They can be escaped with a !:
+
+    ![[wiki syntax]]
+
+But <nop> can't be used to escape them:
+
+    <nop>[[wiki syntax]]
+
+
+---+ Named Links
+
+Named links look like this:
+
+    [[link][label]]
+    [[#AnchorLink][label]]
+    [[http://gnu.org/][GNU]]
+
+The label can contain formatting, but there need to be a space before the ]]:
+
+    [[LinkHere][formatting: *bold* =raw= ]]
+
+The label can include variable references:
+
+    [[Link][a %VARIABLE%]]
+    [[Link][%WITH_PARMAS{a="1"}%]]
+
+The label can contain HTML and comments:
+
+    [[http://gnu.org/][<b>bold</b> <!-- comment -->]]
+
+The link part can also have variable references:
+
+    [[Link.%VAR%][name]]
+
+A link can be escaped:
+
+    ![[#Anchor][blah]]
+
+But not with <nop>:
+
+    <nop>[[#Anchor][blah]]
+
+Having two links on the same line is allowed:
+
+    [[link][name]] [[link][name]]
+
+
+---+ External Links
+
+Mail links:
+
+    a@b.com
+    joh.bloggs@gmail.com
+    mailto:job.bloggs@gmail.com
+    [[mailto:a@b.com][Mail]]
+    [[mailto:?subject=Hi][Hi]]
+
+Other links:
+
+    file:////host/c/users/jbloggs
+    ftp://url.com/here
+    gopher://url.com/here
+    https://url.com/here
+    http://url.com/here
+    irc://url.com/here
+    news://url.com/here
+    nntp://url.com/here
+    telnet://url.com/here

@@ -1,0 +1,32 @@
+{
+    "name": "vscode-twiki",
+    "displayName": "TWiki/Foswiki",
+    "description": "TWiki and Foswiki Language Support",
+    "version": "1.0.0",
+    "publisher": "darryllawson",
+    "engines": {
+        "vscode": "^1.13.0"
+    },
+    "categories": [
+        "Languages",
+        "Snippets"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "twiki",
+            "aliases": ["TWiki/Foswiki", "twiki"],
+            "extensions": [".twiki", ".foswiki"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "twiki",
+            "scopeName": "text.html.twiki",
+            "path": "./syntaxes/twiki.tmLanguage"
+        }],
+        "snippets": [{
+            "language": "twiki",
+            "path": "./snippets/twiki.json"
+        }]
+    },
+    "icon": 
+}

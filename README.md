@@ -1,4 +1,4 @@
-# TWiki/Foswiki Language Support for Visual Studio Code
+# TWiki and Foswiki Language Support for Visual Studio Code
 
 A [Visual Studio Code](http://code.visualstudio.com) extension providing language support for the [TWiki](http://twiki.org/) and [Foswiki](http://foswiki.org/) markup language.
 

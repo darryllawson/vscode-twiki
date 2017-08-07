@@ -13,6 +13,7 @@
         "url": "https://github.com/darryllawson/vscode-twiki/issues",
         "email": "darryl.lawson@me.com"
     },
+    "icon": "images/icon.png",
     "engines": {
         "vscode": "^1.13.0"
     },

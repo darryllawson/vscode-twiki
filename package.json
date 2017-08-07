@@ -13,10 +13,6 @@
         "url": "https://github.com/darryllawson/vscode-twiki/issues",
         "email": "darryl.lawson@me.com"
     },
-    "galleryBanner": {
-        "color": "#BDE988",
-        "theme": "dark"
-    },
     "engines": {
         "vscode": "^1.13.0"
     },
